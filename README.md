@@ -26,7 +26,8 @@
 
 앱의 구조를 그림으로 나타내면 이런식으로 렌더링됩니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fba479d2-e80f-4512-8dcd-ec4055d57b1e/Untitled.png)
+![todoimg](https://user-images.githubusercontent.com/99397079/228534373-f2a2b4f0-c616-4b13-9880-05c899f0652f.png)
+
 
 TodoTemplate 안에 모든 것들을 넣는다면 이런형식으로 구조가 잡힙니다.
 
