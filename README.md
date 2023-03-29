@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+### **1) TodoTemplate**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+모든 기능은 TodoTemplate 컴포넌트 안에 구성되게 됩니다.
 
-## Available Scripts
+전 컨포넌트가 담겨있는 컨테이너라고 생각하면 될 것 같습니다.
 
-In the project directory, you can run:
+### 2) TodoInsert
 
-### `npm start`
+할 일의 입력이 가능한 컴포넌트 입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+할 일을 입력하세요. 라는 글씨가 적혀있는 입력창에 + 버튼을 클릭하게 되면 할일이 추가됩니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3) TodoList
 
-### `npm test`
+각 TodoListItem 하나씩 담아주는 역할을 하는 컨테이너라고 보시면 됩니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+즉, 할 일 목록의 역할을 하게됩니다.
 
-### `npm run build`
+### 4) TodoListItem
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+각 할 일에 대한 정보를 렌더링해주는 컴포넌트입니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+만들어진 후 TodoList에 들어가게 됩니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 🐣 TodoList 앱 구성
 
-### `npm run eject`
+앱의 구조를 그림으로 나타내면 이런식으로 렌더링됩니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fba479d2-e80f-4512-8dcd-ec4055d57b1e/Untitled.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+TodoTemplate 안에 모든 것들을 넣는다면 이런형식으로 구조가 잡힙니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```jsx
+<TodoTemplate> 앱을 이루는 컨테이너 박스
+	<TodoInsert /> 할 일 입력창 
+	<TodoList> 할 일 목록
+		<TodoListItem /> 할 일
+	</TodoList>
+</TodoTemplate>
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```jsx
+<TodoEdit /> 수정하기창(팝업창)
+```
